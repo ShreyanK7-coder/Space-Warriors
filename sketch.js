@@ -52,8 +52,8 @@ function draw(){
             spawnlaser()
         }
         spawnalien()
-        lasergroup.isTouching(aliengroup,destroyAlien)
-        if (aliengroup.isTouching(ss)||aliengroup.isTouching(edges[0]){
+        lasergroup.isTouching(aliengroup,destroyAlien) 
+        if (aliengroup.isTouching(ss)||aliengroup.isTouching(edges[0])){
             gamestate = "stop"
         }
     }
@@ -132,6 +132,4 @@ function gameover(){
             }
         }
     )
-
 }
-
