@@ -38,6 +38,8 @@ function draw(){
     drawSprites()
     textSize(30)
     text("Score: "+score,50,50)
+    text("Arrow keys or W and A to move, spacebar to shoot.",1200,50)
+    text("Made by shreyanK7-coder",1500,900)
     if(gamestate === "play"){
         if(keyDown("W")||keyDown(UP_ARROW)){
             ss.y-=8
@@ -133,4 +135,5 @@ function gameover(){
             }
         }
     )
+
 }
