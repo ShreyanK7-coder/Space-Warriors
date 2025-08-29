@@ -7,6 +7,7 @@ var score = 0
 var gamestate = "play"
 var edges
 var invisSprite
+var fc = 0
 function preload(){
     bgimg = loadImage("./Assets/bg3.png")
     ssimg = loadImage("Assets/ss2.png")
@@ -49,6 +50,7 @@ function draw(){
         }
         ss.collide(edges)
         if (keyDown("space")){
+            console.log(fc)
             spawnlaser()
         }
         spawnalien()
@@ -63,11 +65,15 @@ function draw(){
 }
 
 function spawnlaser(){
-    laser=createSprite(175,ss.y,60,5)
-    laser.shapeColor = rgb(0,255,255)
-    laser.velocityX = 10
-    laser.lifetime= width/10
-    lasergroup.add(laser)
+    console.log(fc)
+    if (frameCount-fc>20){    
+        laser=createSprite(175,ss.y,60,5)
+        laser.shapeColor = rgb(0,255,255)
+        laser.velocityX = 10
+        laser.lifetime= width/10
+        lasergroup.add(laser)
+        fc = frameCount
+    }
 }
 
 function spawnalien(){
