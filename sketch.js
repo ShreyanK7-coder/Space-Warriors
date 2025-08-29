@@ -53,10 +53,7 @@ function draw(){
         }
         spawnalien()
         lasergroup.isTouching(aliengroup,destroyAlien)
-        // if (aliengroup.isTouching(invisSprite)){
-        //     score -= 0.1
-        // }
-        if (aliengroup.isTouching(ss)){
+        if (aliengroup.isTouching(ss)||aliengroup.isTouching(edges[0]){
             gamestate = "stop"
         }
     }
@@ -137,3 +134,4 @@ function gameover(){
     )
 
 }
+
